@@ -38,7 +38,7 @@ a {
 }
 /* bootstrap maipulation */
 .nav-item {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: var(--color);
   text-decoration: none;
   background-image: linear-gradient(90deg, var(--bg), var(--bg)),
@@ -65,10 +65,10 @@ a {
 
 /* header */
 .header {
-  margin-top: 150px !important;
+  margin-top: 120px !important;
 }
 .header-text-main {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 .header-text-sub {
   font-size: 2rem;
@@ -203,6 +203,9 @@ a {
 /* footer */
 .footer-text-main {
   font-size: 4rem;
+}
+.footer {
+  padding-bottom: 150px;
 }
 .medium-text {
   font-size: 1.3rem;
