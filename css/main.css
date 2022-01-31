@@ -1,0 +1,217 @@
+:root {
+  --bg: hsl(0, 100%, 10%);
+  --color: hsl(0, 0%, 100%);
+  --underline-width: 8px;
+  --underline-block-width: 20px;
+  --underline-color: hsla(0, 0%, 100%, 1);
+  --underline-color-hover: rgb(243, 243, 243);
+  --underline-transition: 0.5s;
+}
+
+/* font import */
+@font-face {
+  font-family: "DMSans";
+  src: url("../assets/fonts/DMSans-Regular.ttf");
+}
+* {
+  font-family: "DMSans", sans-serif;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: #5cdb95;
+}
+/* theme */
+.light-theme {
+}
+.dark-theme {
+  transition: 0.8s ease-in-out;
+  color: #fff;
+  background-color: #000;
+}
+.section-heading {
+  font-size: 3rem;
+  margin: 120px 0px;
+}
+/* bootstrap maipulation */
+.nav-item {
+  font-size: 1.6rem;
+  color: var(--color);
+  text-decoration: none;
+  background-image: linear-gradient(90deg, var(--bg), var(--bg)),
+    linear-gradient(90deg, var(--underline-color), var(--underline-color));
+  background-size: var(--underline-block-width) var(--underline-width),
+    100% var(--underline-width);
+  background-repeat: no-repeat;
+  background-position-x: calc(var(--underline-block-width) * -1), 0;
+  background-position-y: 100%;
+  transition: background-position-x var(--underline-transition);
+}
+.nav-item:hover {
+  background-image: linear-gradient(90deg, var(--bg), var(--bg)),
+    linear-gradient(
+      90deg,
+      var(--underline-color-hover),
+      var(--underline-color-hover)
+    );
+  background-position-x: calc(100% + var(--underline-block-width)), 0;
+}
+.navbar {
+  background-color: transparent !important;
+}
+
+/* header */
+.header {
+  margin-top: 150px !important;
+}
+.header-text-main {
+  font-size: 6rem;
+}
+.header-text-sub {
+  font-size: 2rem;
+}
+.img-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.card-item {
+  background-color: #fff;
+  transition: 0.1s ease;
+}
+.link {
+  height: 30px;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+}
+.text-focused {
+  font-weight: bold;
+}
+/* Hide extra text */
+.mask {
+  position: relative;
+  padding: 0;
+  height: 20px;
+
+  /*  Remove overflow to see how it works　:) */
+  overflow: hidden;
+}
+
+.link-container {
+  transition: transform 0.4s ease;
+}
+
+.title {
+  display: block;
+
+  /*  Set same font-size and line height  */
+  font-size: 20px;
+  line-height: 20px;
+
+  transition: transform 0.4s ease;
+}
+
+.link-title1 {
+  transform-origin: right center;
+}
+
+.link-title2 {
+  transform-origin: left center;
+  transform: rotate(20deg);
+}
+
+.link-icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: #f8f8ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+
+  /*  Remove overflow to see how it works　:) */
+  overflow: hidden;
+}
+
+.icon {
+  display: block;
+  position: absolute;
+  transition: transform 0.4s ease;
+}
+
+.icon:nth-child(2) {
+  transform: translate(-40px);
+}
+
+/* Hover Action*/
+
+/* Move up two texts (20px = font-size) */
+.link:hover .link-container {
+  transform: translateY(-20px);
+}
+
+/* Rotate texts a little bit */
+.link:hover .link-title1 {
+  transform: rotate(20deg);
+}
+
+.link:hover .link-title2 {
+  transform: rotate(0);
+}
+
+/* Move arrows to right */
+.link:hover .icon:first-child {
+  transform: translate(40px);
+}
+
+.link:hover .icon:nth-child(2) {
+  transform: translate(0px);
+}
+
+/* services */
+
+.services .container {
+  margin-top: 112px;
+  text-align: start;
+}
+.services-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.services-list {
+  margin-top: 43px;
+  padding: 0 !important;
+  list-style-type: none;
+}
+.services-list li {
+  font-size: 1.3rem;
+}
+.desc {
+  font-size: 1.5rem;
+}
+.text-fade {
+  color: rgb(124, 124, 124);
+}
+/* works section */
+
+/* footer */
+.footer-text-main {
+  font-size: 4rem;
+}
+.medium-text {
+  font-size: 1.3rem;
+}
+.tags {
+  display: flex;
+}
+.tag-item {
+  padding: 3px;
+  background-color: rgba(255, 255, 255, 0.137);
+  color: #fff;
+}
